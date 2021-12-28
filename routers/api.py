@@ -1,9 +1,10 @@
 import base64
 import io
+from PIL import Image
 from fastapi import UploadFile, File
 from fastapi.routing import APIRouter
 from models import OutputNeural
-from PIL import Image
+
 
 router = APIRouter(prefix='/api',
                    tags=['api'])
