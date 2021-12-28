@@ -1,8 +1,7 @@
 import base64
 import io
 from PIL import Image
-from fastapi import UploadFile
-from fastapi.params import File
+from fastapi import UploadFile, File
 from fastapi.responses import HTMLResponse
 from fastapi.routing import APIRouter
 from fastapi.requests import Request

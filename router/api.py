@@ -5,11 +5,11 @@ from fastapi.routing import APIRouter
 from models import OutputNeural
 from PIL import Image
 
-api_router = APIRouter(prefix='/api',
-                       tags=['api'])
+router = APIRouter(prefix='/api',
+                   tags=['api'])
 
 
-@api_router.post('/detection/', response_model=OutputNeural)
+@router.post('/detection/', response_model=OutputNeural)
 async def detection(image: UploadFile = File(...)):
     buffer = io.BytesIO()
     img = Image.open(io.BytesIO(await image.read()))
